@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+  }
+
+  h1{
+      font-family: $font-family-shrikhand, sans-serif;
+      text-align: center;
+      font-weight: normal;
+      margin-top: 25px;
+    
+
+  }
+  h2{
+      font-family: $font-roboto;
+      margin-left: 20px;
+
+  }
+  body{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-family: $font-roboto, sans-serif;
+  }
+  h4{
+      margin-bottom: 0px;
+      margin-left: 15px;
+      font-size: 18px;
+      
+     
+  }
+  h3{
+      margin-left: 38px;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-top: 20px;
+      font-family: $font-family-shrikhand, sans-serif;
+      font-weight: normal;
+      color: white;
+  }
+  

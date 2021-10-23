@@ -1,0 +1,42 @@
+@import "../utils/keyframes";
+@import"../utils/variables";
+
+.loader{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: auto;
+    border-top: 10px solid $color-secondary;
+    border-bottom: 10px solid $color-secondary;
+    border-left: 10px solid $color-primary;
+border-right: 10px solid $color-primary;   
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-animation: rotation 500ms linear 0ms infinite ;
+     -moz-animation: rotation 500ms linear  0ms infinite ;
+    -o-animation:rotation 500ms linear 0ms infinite ;
+    animation: rotation 500ms linear 0ms infinite ;
+    &__load{
+        width: 40px;
+        height: 40px;
+        border-right: 10px solid $color-tertiary;
+        border-top: 10px solid transparent;
+        border-left: 10px solid $color-tertiary;
+        border-bottom: 10px solid transparent;
+        border-radius: 50%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-animation: rotation 190ms linear 0ms infinite reverse;
+     -moz-animation: rotation 190ms linear  0ms infinite reverse;
+    -o-animation: rotation 190ms linear 0ms infinite reverse;
+    animation: rotation 190ms linear 0ms infinite reverse;
+    }
+}
+    

@@ -1,0 +1,22 @@
+@mixin button {
+  background-color: $color-tertiary;
+  border-radius: 5px;
+  width: 90px;
+  height: 30px;
+  position: absolute;
+  color: green;
+  @include flexcentre;
+  margin-left: 238px;
+  margin-top: 15px
+  }
+  
+  @mixin flexcentre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+  
+ 

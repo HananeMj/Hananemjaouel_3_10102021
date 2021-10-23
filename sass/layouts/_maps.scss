@@ -1,0 +1,23 @@
+// maps
+.map {
+    background-color: rgb(235, 231, 231);
+    height: 55px;
+    width: 100%;
+    @include flexcentre;
+  
+  
+  &__icone {
+    @include flexcentre;
+  
+  }
+}
+  .local{
+    margin-right: 10px;
+  }
+    
+    .map-search {
+      font-family: $font-roboto, sans-serif;
+      font-weight: normal;
+      @include flexcentre;
+      
+    }

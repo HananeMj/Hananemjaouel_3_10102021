@@ -1,0 +1,43 @@
+@keyframes rotation{
+    0%{
+        transform: rotate(0deg);
+       
+    }
+    
+    100%{
+        transform: rotate(360deg);
+       
+    }
+}  
+    
+
+
+@-webkit-keyframes rotation{
+    0%{
+        -webkit-transform: rotate(0deg);
+       
+    }
+   
+    100%{
+        -webkit-transform: rotate(360deg);
+         
+    }
+}
+@keyframes fullheart{
+    0%{
+        opacity: 0;
+    }
+    
+    50%{opacity: 0,50;}
+    
+    100%{opacity: 1;}
+}
+@-webkit-keyframes fullheart{
+    0%{
+        opacity: 0;
+    }
+    
+    50%{opacity: 0,50;}
+    
+    100%{opacity: 1;}
+}

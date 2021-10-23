@@ -1,0 +1,18 @@
+.heart{
+    height: 18px;
+    width: 20px;
+    position: absolute;
+    margin-left: 300px;}
+
+       .fullheart{
+       cursor: pointer;
+        &:hover{
+        animation: fullheart 1s ease-out;
+        opacity: 1;
+        background-image: linear-gradient( #9356dc, #ff79da);
+        background-image: -webkit-gradient(#9356dc, #ff79da);
+       background-image: -o-linear-gradient(#9356dc, #ff79da); 
+       background-image: -moz-linear-gradient(#9356dc, #ff79da);}}
+    
+
+
