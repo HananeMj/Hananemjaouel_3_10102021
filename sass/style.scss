@@ -14,12 +14,35 @@
   background-color: $color-grey-shadow;
   padding-top: 25px;
   padding-bottom: 50px;
+  &__par{
+    font-size: 16px;
+    font-weight: 300;
+  }
   
   
 }
 // fonctionnements
 
-.section1__liste {
+.section1{
+  @include desktop {
+display: flex;
+flex-direction: column;
+}
+&__bloc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+  &__heading{
+    @include desktop{
+    margin-left:500px;
+    
+    }
+    
+  }
+}
+  
+  .section1__list {
   list-style-type: none;
   background-color: $color-grey-shadow;
   height: 70px;
@@ -27,15 +50,24 @@
   border-radius: 25px;
   margin-left: 20px;
   padding-left: 0;
+  @include desktop{
+    margin-left:15;
+    width: 30%;
+    margin-right: 15px;
+   
+  }
+ 
   &:hover{
     background-color: #f5edff;
+    
   }
-  
- 
-}
-.icone{
+} 
+ .icone{
   margin-right: 0px;
   margin-top: 15px;
+  &:hover{
+    color: $color-primary;
+  }
 }
 
 .number{
@@ -49,7 +81,9 @@ color: white;
 margin-right: 0px;
 margin-top: 23px;
 margin-left: 10px;
-position: absolute;}
+position: absolute;
+
+}
 
 
 
@@ -61,11 +95,6 @@ position: absolute;}
   padding-top: 10px;
   margin-left: 30px;
   width: 230px;
-
-
-&__par{
-  font-size: 16px;
-}
 }
 // restaurants
 .section2{
@@ -80,7 +109,10 @@ position: absolute;}
   margin-bottom: 30px;
   background-color: white;
   margin-left: 20px;
-  box-shadow: 6px 6px 6px #dbdbdb;}
+  box-shadow: 6px 6px 6px #dbdbdb;
+@include desktop{
+  width: 40%;
+}}
 
   
 a{
@@ -111,7 +143,14 @@ img{
 .recipe{
   margin-top: 5px;
   margin-left: 15px;
+  font-weight: 300;
   
 }
 
+}
+.responsive{
+  @include desktop{
+    display: flex;
+    flex-direction: row;
+  }
 }

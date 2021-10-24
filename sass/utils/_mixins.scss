@@ -1,7 +1,7 @@
 @mixin button {
   background-color: $color-tertiary;
   border-radius: 5px;
-  width: 90px;
+  width: 80px;
   height: 30px;
   position: absolute;
   color: green;
@@ -16,6 +16,35 @@
     align-items: center;
     
   }
+
+  //responsive
+
+  $breakpoint:(
+
+    "desktop": 1120px,
+    "laptop": 1024px,
+    "tablet": 800px,
+    "phablet": 600px,
+    "mobile": 375px, 
+  );
+
+  @mixin desktop {
+      @media screen and (min-width:map-get($breakpoint, desktop)) { @content ; }
+   }
+    @mixin laptop {
+      @media screen and (min-width:map-get($breakpoint,laptop )) { @content ; }
+   }
+     @mixin tablet {
+      @media screen and (min-width:map-get($breakpoint, tablet)) { @content ; }
+   }
+    @mixin phablet {
+      @media screen and (min-width:map-get($breakpoint, phablet))  { @content ; }
+   }
+   @mixin mobile {
+      @media screen and (max-width:map-get($breakpoint, mobile))  { @content ; }
+ 
+   }
+ 
   
   
   

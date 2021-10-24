@@ -14,6 +14,13 @@
     -webkit-transform: rotate(360deg);
   }
 }
+@keyframes cercle {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
 @keyframes fullheart {
   0% {
     opacity: 0;
@@ -172,6 +179,13 @@ h3 {
     -webkit-transform: rotate(360deg);
   }
 }
+@keyframes cercle {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
 @keyframes fullheart {
   0% {
     opacity: 0;
@@ -195,48 +209,41 @@ h3 {
   }
 }
 .loader {
-  width: 80px;
-  height: 80px;
-  border-radius: 50px;
-  margin: auto;
-  border-top: 10px solid #ff79da;
-  border-bottom: 10px solid #ff79da;
-  border-left: 10px solid #9356dc;
-  border-right: 10px solid #9356dc;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  -webkit-animation: rotation 500ms linear 0ms infinite;
-  -moz-animation: rotation 500ms linear 0ms infinite;
-  -o-animation: rotation 500ms linear 0ms infinite;
-  animation: rotation 500ms linear 0ms infinite;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: cercle 1s ease-in-out;
+  animation-delay: 3s;
 }
 .loader__load {
-  width: 40px;
-  height: 40px;
-  border-right: 10px solid #99e2d0;
-  border-top: 10px solid transparent;
-  border-left: 10px solid #99e2d0;
-  border-bottom: 10px solid transparent;
-  border-radius: 50%;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-animation: rotation 190ms linear 0ms infinite reverse;
-  -moz-animation: rotation 190ms linear 0ms infinite reverse;
+  /*   width: 40px;
+      height: 40px;
+      border-right: 10px solid $color-tertiary;
+      border-top: 10px solid transparent;
+      border-left: 10px solid $color-tertiary;
+      border-bottom: 10px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -webkit-animation: rotation 190ms linear 0ms infinite reverse;
+   -moz-animation: rotation 190ms linear  0ms infinite reverse;
   -o-animation: rotation 190ms linear 0ms infinite reverse;
-  animation: rotation 190ms linear 0ms infinite reverse;
+  animation: rotation 190ms linear 0ms infinite reverse; */
 }
 
 .carte-btn {
   background-color: #99e2d0;
   border-radius: 5px;
-  width: 90px;
+  width: 80px;
   height: 30px;
   position: absolute;
   color: green;
@@ -275,8 +282,11 @@ h3 {
   cursor: pointer;
 }
 .fullheart:hover {
+  -webkit-animation: fullheart 1s ease-out;
   animation: fullheart 1s ease-out;
   opacity: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9356dc), to(#ff79da));
+  background-image: -o-linear-gradient(#9356dc, #ff79da);
   background-image: linear-gradient(#9356dc, #ff79da);
   background-image: -webkit-gradient(#9356dc, #ff79da);
   background-image: -o-linear-gradient(#9356dc, #ff79da);
@@ -293,8 +303,29 @@ h3 {
   padding-top: 25px;
   padding-bottom: 50px;
 }
+.explorer__par {
+  font-size: 16px;
+  font-weight: 300;
+}
 
-.section1__liste {
+@media screen and (min-width: 1120px) {
+  .section1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.section1__bloc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1120px) {
+  .section1__heading {
+    margin-left: 500px;
+  }
+}
+
+.section1__list {
   list-style-type: none;
   background-color: #f2f2f2;
   height: 70px;
@@ -303,13 +334,23 @@ h3 {
   margin-left: 20px;
   padding-left: 0;
 }
-.section1__liste:hover {
+@media screen and (min-width: 1120px) {
+  .section1__list {
+    margin-left: 15;
+    width: 30%;
+    margin-right: 15px;
+  }
+}
+.section1__list:hover {
   background-color: #f5edff;
 }
 
 .icone {
   margin-right: 0px;
   margin-top: 15px;
+}
+.icone:hover {
+  color: #9356dc;
 }
 
 .number {
@@ -337,9 +378,6 @@ h3 {
   margin-left: 30px;
   width: 230px;
 }
-.liste__par {
-  font-size: 16px;
-}
 
 .section2 {
   background-color: #f2f2f2;
@@ -354,6 +392,11 @@ h3 {
   background-color: white;
   margin-left: 20px;
   box-shadow: 6px 6px 6px #dbdbdb;
+}
+@media screen and (min-width: 1120px) {
+  .section2__carte {
+    width: 40%;
+  }
 }
 .section2 a {
   width: 100%;
@@ -377,6 +420,14 @@ h3 {
 .section2 .recipe {
   margin-top: 5px;
   margin-left: 15px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 1120px) {
+  .responsive {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
