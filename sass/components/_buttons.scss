@@ -1,8 +1,6 @@
 .carte-btn{
- 
-  @include button;
+         @include button;
     }
-
     .explorer__btn{
       width:220px;
       height: 50px;
@@ -13,19 +11,9 @@
       text-align: center;
       font-size: 16px;
       box-shadow: 5px 5px 5px 3px rgb(211, 209, 209);
-    
-      
-        &:hover {
+       &:hover {
         cursor: pointer;
         box-shadow: 5px 5px 5px 3px rgb(116, 115, 115);
         filter: brightness(1.1);
-        
-        
-        
-         
-      
-    
-        
-       }
-      
+         }
     }    

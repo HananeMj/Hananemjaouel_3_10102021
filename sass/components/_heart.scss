@@ -4,18 +4,30 @@
     height: 18px;
     width: 20px;
     position: absolute;
-    margin-left: 300px;}
+    margin-left: 300px;
+    left: 15px;
+    color: white;
+    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
 
-       .fullheart{
-       cursor: pointer;
+   &__heart-empty{
+       position: relative;
+       text-shadow: none;
         &:hover{
-        -webkit-animation: fullheart 1s ease-out;
-                animation: fullheart 1s ease-out;
-        opacity: 1;
-        background-image: -webkit-gradient( linear, left top, left bottom, from(#9356dc), to(#ff79da));
-        background-image: -o-linear-gradient( #9356dc, #ff79da);
-        background-image: linear-gradient( #9356dc, #ff79da);
-        background-image: -webkit-gradient(#9356dc, #ff79da);
-       background-image: -o-linear-gradient(#9356dc, #ff79da); 
-       background-image: -moz-linear-gradient(#9356dc, #ff79da);}}
-    
+        -webkit-animation: empty-heart 2s;
+                animation: empty-heart 2s;
+         }
+        }
+}
+        .heart-full{
+                 position: absolute;
+                 opacity: 0;
+                 top: 0;
+                 text-shadow: none;
+                 &:hover{
+                         animation: fullheart 2s ease forwards;
+                         -webkit-animation: fullheart 2s ease forwards;
+                 }
+                }
+        
+        
+   

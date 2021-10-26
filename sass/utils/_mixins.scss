@@ -3,6 +3,7 @@
   border-radius: 5px;
   width: 80px;
   height: 30px;
+  right: 27px;
   position: absolute;
   color: green;
   @include flexcentre;
@@ -16,11 +17,8 @@
     align-items: center;
     
   }
-
-  //responsive
-
-  $breakpoint:(
-
+   //responsive
+   $breakpoint:(
     "desktop": 1120px,
     "laptop": 1024px,
     "tablet": 800px,

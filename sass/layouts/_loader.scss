@@ -6,28 +6,27 @@
     height: 100%;
     background-color: white;
     position: fixed;
-    @include flexcentre;
     z-index: 10;
-    animation : cercle 1s ease-in-out;
-    animation-delay : 3s;
+    @include flexcentre;
+    -webkit-animation : loader-spin 3000ms forwards;
+    -moz-animation : loader-spin 3000ms forwards;
+    animation : loader-spin 3000ms forwards;
+    
+
     &__load{
-      /*   width: 40px;
-        height: 40px;
-        border-right: 10px solid $color-tertiary;
-        border-top: 10px solid transparent;
-        border-left: 10px solid $color-tertiary;
-        border-bottom: 10px solid transparent;
+         width: 60px;
+        height: 60px;
+        border-right: 10px solid $color-primary;
+        border-top: 10px solid $color-secondary;
+        border-left: 10px solid $color-primary;
+        border-bottom: 10px solid $color-secondary;
         border-radius: 50%;
-        position: absolute;
         margin: auto;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        -webkit-animation: rotation 190ms linear 0ms infinite reverse;
-     -moz-animation: rotation 190ms linear  0ms infinite reverse;
-    -o-animation: rotation 190ms linear 0ms infinite reverse;
-    animation: rotation 190ms linear 0ms infinite reverse; */
-    }
-}
-    
+        -webkit-animation: spin 500ms linear infinite;
+     -moz-animation: spin 500ms linear infinite;
+    -o-animation: spin 500ms linear infinite;
+     animation: spin 500ms linear infinite; } }
