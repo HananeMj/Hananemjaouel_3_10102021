@@ -67,7 +67,8 @@ ul li {
   background-color: white;
   box-shadow: 0 5px 5px 0 rgb(184, 183, 183);
   cursor: pointer;
-  animation: slide 1s forwards; 
+  animation: slide 2s forwards; 
+  -webkit-animation: slide 2s forwards;
 }
 .check {
   height: 70px;
@@ -81,6 +82,7 @@ ul li {
     width: 60px;
     opacity: 1;
     animation: slideleft 300ms ease-in-out;
+    -webkit-animation: slideleft 300ms ease-in-out;
     
 }
 }

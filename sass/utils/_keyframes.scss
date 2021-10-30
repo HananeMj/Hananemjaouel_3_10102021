@@ -50,6 +50,17 @@
         opacity: 1;
     }
 }
+@-webkit-keyframes slide {
+  from{
+      -webkit-transform: translateY(25px);
+      opacity: 0;
+  }
+  to{
+      -webkit-transform: translateY(0px);
+      opacity: 1;
+  }
+}
+//keyframes slide left prix
 @keyframes slideleft{
     0%{
         transform: translateX(20px);
@@ -59,4 +70,14 @@
         transform: translateX(0px);
         opacity: 1;
     }
+}
+@-webkit-keyframes slideleft{
+  0%{
+      -webkit-transform: translateX(20px);
+      opacity: 0.5;
+  }
+  100%{
+      -webkit-transform: translateX(0px);
+      opacity: 1;
+  }
 }
