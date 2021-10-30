@@ -1,4 +1,4 @@
-@mixin button {
+@mixin new {
   background-color: $color-tertiary;
   border-radius: 5px;
   width: 80px;
@@ -8,42 +8,83 @@
   color: green;
   @include flexcentre;
   margin-left: 238px;
-  margin-top: 15px
+  margin-top: 15px;
+}
+@mixin button {
+  width: 220px;
+  height: 50px;
+  border-radius: 40px;
+  background-image: linear-gradient(355deg, $color-primary, $color-secondary);
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 5px 5px 5px 3px rgb(211, 209, 209);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px 3px rgb(116, 115, 115);
+    filter: brightness(1.1);
   }
-  
-  @mixin flexcentre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-   //responsive
-   $breakpoint:(
-    "desktop": 1120px,
-    "laptop": 1024px,
-    "tablet": 800px,
-    "phablet": 600px,
-    "mobile": 375px, 
-  );
+}
 
-  @mixin desktop {
-      @media screen and (min-width:map-get($breakpoint, desktop)) { @content ; }
-   }
-    @mixin laptop {
-      @media screen and (min-width:map-get($breakpoint,laptop )) { @content ; }
-   }
-     @mixin tablet {
-      @media screen and (min-width:map-get($breakpoint, tablet)) { @content ; }
-   }
-    @mixin phablet {
-      @media screen and (min-width:map-get($breakpoint, phablet))  { @content ; }
-   }
-   @mixin mobile {
-      @media screen and (max-width:map-get($breakpoint, mobile))  { @content ; }
- 
-   }
- 
-  
-  
-  
- 
+@mixin flexcentre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin img-cartes {
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+  border-radius: 15px 15px 0 0;
+}
+@mixin heartfull {
+  position: absolute;
+  opacity: 0;
+ color: $color-primary;
+  cursor: pointer;
+  &:hover {
+    animation: fav 500ms linear;
+    -moz-animation: fav 500ms linear;
+    opacity: 1;
+  }
+}
+//responsive
+$breakpoint: (
+  "desktop": 1120px,
+  "laptop": 1024px,
+  "tablet": 800px,
+  "phablet": 600px,
+  "mobile": 375px,
+);
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoint, "desktop")) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (min-width: map-get($breakpoint,"laptop" )) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoint, "tablet")) {
+    @content;
+  }
+}
+@mixin phablet {
+  @media screen and (min-width: map-get($breakpoint, "phablet")) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: map-get($breakpoint, "mobile")) {
+    @content;
+  }
+}

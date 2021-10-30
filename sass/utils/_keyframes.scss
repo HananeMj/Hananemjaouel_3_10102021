@@ -1,49 +1,62 @@
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-       }
-    100%{
-        transform: rotate(360deg);
-        z-index: -10;
-       }
-}  
-    @-webkit-keyframes spin{
-    0%{
-        -webkit-transform: rotate(0deg);
-       }
-   100%{
-        -webkit-transform: rotate(360deg);
-        z-index: -10;
-         }
+// keyframes loader
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    z-index: -10;
+  }
 }
-@keyframes loader-spin{
-    0%{scale: 1;}
-    100%{scale: 1;
-         z-index: -10;
-         visibility: hidden;
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    z-index: -10;
+  }
+}
+@keyframes loader-spin {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1;
+    z-index: -10;
+    visibility: hidden;
+  }
+}
+//keyframes like
+@keyframes fav {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+//keyframes slide des menus vers le haut
+@keyframes slide {
+    from{
+        transform: translateY(25px);
+        opacity: 0;
     }
-}
-    
-// coeur j'aime
-@keyframes fullheart{
-    
-    50%{opacity: 0,5;
-    background-image: linear-gradient(0deg, $color-primary,#975edb, #9a6dd1, $color-secondary);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:$color-secondary;
-}
-    100%{opacity: 1;
-        background-image: $color-secondary;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: $color-primary;
-    }
-}
-
-@keyframes empty-heart{
-    0%{
+    to{
+        transform: translateY(0px);
         opacity: 1;
     }
-    50%{opacity: 0;
+}
+@keyframes slideleft{
+    0%{
+        transform: translateX(20px);
+        opacity: 0.5;
     }
-    100%{opacity: 0;}
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }

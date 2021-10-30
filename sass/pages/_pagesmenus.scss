@@ -1,0 +1,107 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: $font-roboto;
+}
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flèche {
+  position: absolute;
+  margin-right: 300px;
+}
+.image {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+  position: static;
+}
+.à-la-française {
+  background-color: $color-grey-shadow;
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  @include flexbetween;
+  flex-direction: column;
+}
+.menu {
+  font-family: $font-family-shrikhand;
+  font-size: 30px;
+  margin-right: 125px;
+}
+.coeur {
+    @include flexcentre;
+  &__favorite {
+     @include heartfull;  
+    
+  }
+}
+.entrée {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.menu-title {
+  @include flexcentre;
+}
+.meals-title {
+  margin-right: 290px;
+}
+.barre {
+  width: 40px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: $color-tertiary;
+  margin-top: 5px;
+  margin-bottom: 13px;
+}
+ul li {
+  list-style-type: none;
+}
+.food {
+  @include flexbetween;
+  margin-bottom: 15px;
+  height: 70px;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 5px 5px 0 rgb(184, 183, 183);
+  cursor: pointer;
+  animation: slide 1s forwards; 
+}
+.check {
+  height: 70px;
+  opacity: 0;
+  background-color: $color-tertiary;
+  border-radius: 0 15px 15px 0;
+  @include flexcentre;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out, opacity 500ms forwards;
+  &:hover{
+    width: 60px;
+    opacity: 1;
+    animation: slideleft 300ms ease-in-out;
+    
+}
+}
+.starter {
+  padding-left: 10px;
+}
+.food1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.plus {
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.circle {
+  color: white;
+}
+.commande-btn {
+  @include button;
+  width: 190px;
+  margin-bottom: 90px;
+  margin-top: 40px;
+}

@@ -1,33 +1,13 @@
-
-
-.heart{
-    height: 18px;
-    width: 20px;
-    position: absolute;
+.heart {
+  position: absolute;
+  margin-left: 300px;
+  @include flexcentre;
+  &__heart-empty {
     margin-left: 300px;
     left: 15px;
-    color: white;
-    text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+  }
 
-   &__heart-empty{
-       position: relative;
-       text-shadow: none;
-        &:hover{
-        -webkit-animation: empty-heart 2s;
-                animation: empty-heart 2s;
-         }
-        }
+  .heart-full {
+          @include heartfull;
+  }
 }
-        .heart-full{
-                 position: absolute;
-                 opacity: 0;
-                 top: 0;
-                 text-shadow: none;
-                 &:hover{
-                         animation: fullheart 2s ease forwards;
-                         -webkit-animation: fullheart 2s ease forwards;
-                 }
-                }
-        
-        
-   
