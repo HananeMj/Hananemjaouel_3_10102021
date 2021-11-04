@@ -7,7 +7,6 @@
   position: absolute;
   color: green;
   @include flexcentre;
-  margin-left: 238px;
   margin-top: 15px;
 }
 @mixin button {
@@ -43,22 +42,7 @@
   height: 180px;
   border-radius: 15px 15px 0 0;
 }
-@mixin heartfull {
-  position: absolute;
-  opacity: 0;
-  background: linear-gradient(to top, #ff79da, #9356dc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.3s ease-in-out;
- color: $color-primary;
-  cursor: pointer;
- &:hover {
-  opacity: 1;
-    animation: fav 500ms linear;
-    -moz-animation: fav 500ms linear;
-    
-  }
-}
+
 
 //responsive
 $breakpoint: (

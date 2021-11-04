@@ -1,7 +1,12 @@
+
 body {
   box-sizing: border-box;
   margin: 0;
   font-family: $font-roboto;
+}
+.container{
+  z-index: 1;
+  position: relative;
 }
 .page1 {
   display: flex;
@@ -12,37 +17,32 @@ body {
   position: absolute;
   margin-right: 300px;
 }
-.image {
+.image{
   object-fit: cover;
   height: 280px;
   width: 100%;
-  position: static;
 }
 .à-la-française {
+  position: relative;
   background-color: $color-grey-shadow;
+  border-radius: 25px 25px 0 0;
   width: 100%;
-  border-radius: 40px 40px 0 0;
-  @include flexbetween;
   flex-direction: column;
 }
 .menu {
   font-family: $font-family-shrikhand;
   font-size: 30px;
-  margin-right: 125px;
+  margin-left:15px ;
+  margin-top: 0;
+  padding-top: 15px;
 }
-.coeur {
-    @include flexcentre;
-  &__favorite {
-     @include heartfull;  
-    
+.menu-title{
+  margin: auto;
   }
-}
 .entrée {
   font-weight: 300;
   margin-bottom: 0;
-}
-.menu-title {
-  @include flexcentre;
+  margin-left: 15px;
 }
 .meals-title {
   margin-right: 290px;
@@ -54,13 +54,15 @@ body {
   background-color: $color-tertiary;
   margin-top: 5px;
   margin-bottom: 13px;
+  margin-left: 15px;
 }
 ul li {
   list-style-type: none;
 }
 .food {
   @include flexbetween;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-left: 18px;
   height: 70px;
   width: 90%;
   border-radius: 15px;
@@ -100,10 +102,4 @@ ul li {
 
 .circle {
   color: white;
-}
-.commande-btn {
-  @include button;
-  width: 190px;
-  margin-bottom: 90px;
-  margin-top: 40px;
 }

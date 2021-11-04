@@ -1,12 +1,18 @@
 .carte-btn{
          @include new;
-         @include desktop{
-              display: flex;
-              flex-direction: row;
          }
-
-    }
 
     .explorer__btn{
       @include button;
-    } 
+    }
+    .btn{
+      width: 100%;
+      height: 100px;
+      @include flexcentre;
+  &__commande-btn {
+      @include button;
+      width: 190px;
+      
+    }
+     
+  }

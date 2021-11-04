@@ -1,13 +1,36 @@
 .heart {
-  position: absolute;
-  margin-left: 300px;
-  @include flexcentre;
-  &__heart-empty {
-    margin-left: 300px;
-    left: 15px;
+  .fa-heart{
+    position: absolute;
+    right: 30px;
+    margin-top: 20px;
+    
+  }
+  .far {
+ 
+    z-index: 2;
+    opacity: 1;
+        transition: opacity 0.6s ease-in-out;
+        &:hover{
+            opacity: 0;
+            + .fas{
+              
+                opacity: 1;
+                animation: fav 0.4s linear both;
+            }
+        }
   }
 
-  .heart-full {
-          @include heartfull;
+  .fas {
+    background: linear-gradient(to top, #ff79da, #9356dc);
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        z-index: 1;
+        transform-origin: 50% bottom;
+        transform: scale(1);
+        animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
+ 
   }
 }

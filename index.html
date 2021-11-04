@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width" , initial-scale="1.0">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width-device-width" , initial-scale="1.0">
+  <link rel="stylesheet" href="./public/css/index.css" />
+  <link rel="icon" type="image/png" href="./public/images/logo/ohmyfood@2x.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
@@ -48,40 +49,36 @@
     <!--section fonctionnement-->
     <section class="section1">
       <h2 class="section1__heading">Fonctionnement</h2>
-      <div class="section1__number">1</div>
-      <ul class="section1__list">
-        <li class="liste"><i class="fas fa-mobile-alt icone"></i>
-          <p class="liste__par">Choisissez un restaurant</p>
-        </li>
-      </ul>
-      <div class="section1__number">2</div>
-      <ul class="section1__list">
-        <li class="liste"><i class="fas fa-list-ul icone"></i>
-          <p class="liste__par">Composez votre menu</p>
-        </li>
-      </ul>
-      <div class="section1__number">3</div>
-      <ul class="section1__list">
-        <li class="liste"><i class="fas fa-store icone"></i>
-          <p class="liste__par">Dégustez au restaurant</p>
-        </li>
-      </ul>
+      <div class="section1__list">
+        <span class="section1__number">1</span>
+        <i class="fas fa-mobile-alt icone"></i>
+          <div class="section__titre">Choisissez un restaurant</div>
+      </div>
+      <div class="section1__list">
+        <span class="section1__number">2</span>
+        <i class="fas fa-list-ul icone"></i>
+          <div class="section1__titre">Composez votre menu</div>
+      </div>
+      <div class="section1__list">
+        <span class="section1__number">3</span>
+        <i class="fas fa-list-ul icone"></i>
+          <div class="section1__titre">Dégustez au restaurant</div>
+      </div>
       <!--section restaurants-->
     </section>
     <section class="section2">
       <h2 class="section2__heading">Restaurants</h2>
       <!--carte resto 1-->
-      <span class="section2__resp">
         <div class="section2__carte">
-          <a href="./lapalettedugout.html">
+          <a href="lapalettedugout.html">
+           <figure>
             <div class="carte-btn">Nouveau</div>
-            <figure>
-              <img class="img-cartes" src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              <img class="img-cartes" src="./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="restaurant 1" />
               <figcaption>
                 <span class="heart">
-                  <i class=" heart-empty far fa-heart fa-2x"></i>
-                  <i class=" heart-full fas fa-heart fa-2x"></i>
+                  <i class="far fa-heart fa-2x"></i>
+                  <i class="fas fa-heart fa-2x"></i>
                 </span>
                 <h4>La palette du goût</h4>
                 <p class="recipe">Ménilmontant</p>
@@ -91,11 +88,10 @@
         </div>
         <!--carte resto 2-->
         <div class="section2__carte">
-          <a href="./la-note-enchantée.html">
-            <div class="carte-btn">Nouveau</div>
+          <a href="la-note-enchantée.html">
             <figure>
-              <img class="img-cartes" src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                alt="restaurant 2" />
+              <div class="carte-btn">Nouveau</div>
+              <img class="img-cartes" src="./public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant 2" />
               <figcaption>
                 <span class="heart">
                   <i class=" heart-empty far fa-heart fa-2x"></i>
@@ -107,14 +103,14 @@
             </figure>
           </a>
         </div>
-        </div>
-      </span>
+      </div>
       <!--carte resto 3-->
       <span class="section2__resp">
         <div class="section2__carte">
-          <a href="./àlafrançaise.html">
+          <a href="àlafrançaise.html">
             <figure>
-              <img class="img-cartes" src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant 3" />
+              <img class="img-cartes" src="./public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="restaurant 3" />
               <figcaption>
                 <span class="heart">
                   <i class=" heart-empty far fa-heart fa-2x"></i>
@@ -128,9 +124,9 @@
         </div>
         <!--carte resto 4-->
         <div class="section2__carte">
-          <a href="./Ledélice-dessens.html">
+          <a href="Ledélice-dessens.html">
             <figure>
-              <img class="img-cartes" src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+              <img class="img-cartes" src="./public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
                 alt="restaurant 4" />
               <figcaption>
                 <span class="heart">
