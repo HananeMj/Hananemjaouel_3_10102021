@@ -19,5 +19,8 @@
       font-family: $font-roboto, sans-serif;
       font-weight: normal;
       @include flexcentre;
+      @include laptop{
+        font-weight: bold;
+      }
       
     }

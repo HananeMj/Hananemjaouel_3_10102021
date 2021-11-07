@@ -63,63 +63,45 @@
 }
 //keyframes slide des menus vers le haut
 @keyframes slide {
-    from{
+    0%{
         transform: translateY(25px);
         opacity: 0;
     }
-    to{
+    100%{
         transform: translateY(0px);
         opacity: 1;
     }
 }
 @-webkit-keyframes slide {
-  from{
+  0%{
       -webkit-transform: translateY(25px);
       opacity: 0;
   }
-  to{
+  100%{
       -webkit-transform: translateY(0px);
       opacity: 1;
   }
 }
 @-moz-keyframes slide {
-  from{
+  0%{
       -moz-transform: translateY(25px);
       opacity: 0;
   }
-  to{
+  100%{
       -moz-transform: translateY(0px);
       opacity: 1;
   }
 }
 //keyframes slide left prix
-@keyframes slideleft{
+@keyframes checker{
     0%{
-        transform: translateX(20px);
-        opacity: 0.5;
+        transform: scaleX(0);
+        transform-origin: right;
+        }
+      100%{
+       transform: scaleX(1);
+       transform-origin: right;
     }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
 }
-@-webkit-keyframes slideleft{
-  0%{
-      -webkit-transform: translateX(20px);
-      opacity: 0.5;
-  }
-  100%{
-      -webkit-transform: translateX(0px);
-      opacity: 1;
-  }
-}
-@-moz-keyframes slideleft{
-  0%{
-      -moz-transform: translateX(20px);
-      opacity: 0.5;
-  }
-  100%{
-      -moz-transform: translateX(0px);
-      opacity: 1;
-  }
-}
+
+

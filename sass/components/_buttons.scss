@@ -1,9 +1,16 @@
 .carte-btn{
          @include new;
+         @include laptop{
+           right: 25px;
+         }
          }
 
     .explorer__btn{
       @include button;
+      @include laptop{
+        font-size: 20px;
+        width: auto;
+      }
     }
     .btn{
       width: 100%;

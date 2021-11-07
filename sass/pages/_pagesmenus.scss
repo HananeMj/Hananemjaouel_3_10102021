@@ -1,44 +1,59 @@
-
 body {
   box-sizing: border-box;
   margin: 0;
   font-family: $font-roboto;
 }
-.container{
+.container {
   z-index: 1;
   position: relative;
+  @include laptop{
+    @include flexcentre;
+  }
 }
 .page1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexcentre;
+  @include laptop{
+    border-bottom: 4px solid $color-primary;
+  }
 }
 .flèche {
   position: absolute;
   margin-right: 300px;
 }
-.image{
+.image {
   object-fit: cover;
   height: 280px;
   width: 100%;
+  @include laptop{
+    height: 1142px;
+  }
 }
-.à-la-française {
+.img-note{
+height: 1232px;
+}
+.restaurant {
   position: relative;
   background-color: $color-grey-shadow;
   border-radius: 25px 25px 0 0;
   width: 100%;
   flex-direction: column;
+  @include laptop{
+    border-radius: 0 0 0 0;
+    border-left:  4px solid $color-secondary;
+  }
+
 }
 .menu {
   font-family: $font-family-shrikhand;
   font-size: 30px;
-  margin-left:15px ;
+  margin-left: 15px;
   margin-top: 0;
   padding-top: 15px;
 }
-.menu-title{
+.menu-title {
   margin: auto;
-  }
+  padding-top: 20px;
+}
 .entrée {
   font-weight: 300;
   margin-bottom: 0;
@@ -56,9 +71,6 @@ body {
   margin-bottom: 13px;
   margin-left: 15px;
 }
-ul li {
-  list-style-type: none;
-}
 .food {
   @include flexbetween;
   margin-bottom: 20px;
@@ -68,38 +80,83 @@ ul li {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 5px 5px 0 rgb(184, 183, 183);
-  cursor: pointer;
-  animation: slide 2s forwards; 
-  -webkit-animation: slide 2s forwards;
+  animation: slide 1000ms linear 2500ms;
+  -webkit-animation: slide 1000ms linear 2500ms;
+  -moz-animation: slide 1000ms linear 2500ms;
+  &:hover {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    > .check {
+      margin-left: 10px;
+      width: 70px;
+      opacity: 1;
+      transition: all 500ms ease-in-out;
+    }
+  }
+
+  .food__starter{
+    width: 100%;
+    padding-left: 10px;
+  }
+  .food__prix{
+    width: 50px;
+    
+  }
 }
+.food:hover{
+   .icon{
+      transform: rotate(0deg);
+      transition: transform 500ms ease-in-out;
+  }
+}
+
+  .food:hover{
+    > .food__starter{
+       text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  
+.food__food1 {
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+   .food__plus {
+    font-weight: 100;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .food__prix {
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
 .check {
   height: 70px;
-  opacity: 0;
+  width: 0;
   background-color: $color-tertiary;
   border-radius: 0 15px 15px 0;
   @include flexcentre;
-  cursor: pointer;
-  transition: transform 500ms ease-in-out, opacity 500ms forwards;
-  &:hover{
-    width: 60px;
-    opacity: 1;
-    animation: slideleft 300ms ease-in-out;
-    -webkit-animation: slideleft 300ms ease-in-out;
-    
+  transform-origin: right;
+  opacity: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  .icon {
+    color: white;
+    transform: rotate(180deg);
+  }
 }
-}
-.starter {
-  padding-left: 10px;
-}
-.food1 {
-  font-size: 18px;
-  font-weight: 400;
-}
-.plus {
-  font-weight: 100;
-  font-size: 15px;
+.footer{
+  @include laptop{
+    border-top: 4px solid $color-primary;
+  }
 }
 
-.circle {
-  color: white;
-}
