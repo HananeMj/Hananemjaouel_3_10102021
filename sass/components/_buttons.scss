@@ -1,9 +1,3 @@
-.carte-btn{
-         @include new;
-         @include laptop{
-           right: 25px;
-         }
-         }
 
     .explorer__btn{
       @include button;
@@ -23,3 +17,14 @@
     }
      
   }
+  .carte-btn{
+    background-color: $color-tertiary;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  right: 15px;
+  position: absolute;
+  color: green;
+  @include flexcentre;
+  margin-top: 15px;
+    }

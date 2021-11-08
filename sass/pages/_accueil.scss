@@ -1,141 +1,139 @@
-
 .explorer {
+  @include flexcentre;
+  flex-direction: column;
+  text-align: center;
+  background-color: $color-grey-shadow;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  font-weight: bold;
+  &__info {
+    @include phablet {
+      font-weight: bold;
+      ont-size: 30px;
+    }
+  }
+  &__parag {
+    font-size: 18px;
+    font-weight: 300;
+    width: 350px;
+    @include tablet {
+      width: auto;
+      font-size: 20px;
+      margin-top: 0;
+    }
+  }
+}
+// fonctionnements
+.section1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__étapes {
     @include flexcentre;
     flex-direction: column;
-    text-align: center;
-    background-color: $color-grey-shadow;
-    padding-top: 25px;
-    padding-bottom: 50px;
-    font-weight: bold;
-    &__info{
-      @include phablet{
-        font-weight: bold;
-        font-size: 30px;
-      }
-    }
-    &__parag {
-      font-size: 18px;
-      font-weight: 300;
-      width: 350px;
-      @include laptop{
-        width: auto;
-        font-size: 20px;
-        margin-top: 0;
-      }
-    }
-  }
-  // fonctionnements
-  .section1 {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    &__heading{
-      @include phablet{
-        @include flexcentre;
-      }
-      }
-     &__number {
-      margin: 0 0 0 -35px;
-      width: 24px;
-      height: 24px;
-      border-radius: 50px;
-      @include flexcentre;
-      background-color: $color-primary;
-      color: white;
-      @include phablet{
-       margin-right: 5px;
-       margin-left:-10px;
-        
-      }  
-    }
-  }
-  .étapes{
-    @include phablet{
-      @include flexbetween;
-    }
-  }
-  .section1__list {
-    background-color: $color-grey-shadow;
-    width: auto;
-    height: 70px;
-    margin: 15px 20px 15px 20px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    @include phablet{
-      width: auto;
-      margin: 10px;
-      padding: 0 5px 0 5px;
-    }
-    &:hover {
-      background-color: #f5edff;
-      >.icone {
-           color: $color-primary;
-    }
-  }
-}
-.icone{
-  padding: 0 10px 0 0;
-}
-.section1__titre{
-  width: auto;
-}
-  // restaurants
-  .section2 {
-    background-color: $color-grey-shadow;
-    padding-top: 35px;
-    padding-bottom: 50px;
-    margin-top: 25px;
-    @include phablet{
-      border-top: 4px solid $color-secondary;
-    }
-    &__heading{
-      @include phablet{
-        @include flexcentre;
-      }
-      }
-      &__laptop{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-      }
-    &__carte {
-      height: 270px;
-      border-radius: 15px;
-      margin: 0 15px 20px 15px;
-      background-color: white;
-      box-shadow: 6px 6px 6px #dbdbdb;
-      @include phablet{
-        border:solid 4px $color-primary;
-      }
-    }
-  }
-  a {
-    margin: 0;
-    text-decoration: none;
-    color: black;
-  }
-  figure {
     width: 100%;
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-    height: 100%;
-    @include phablet {
-      margin: 0;
+  }
+  &__number {
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    position: absolute;
+    left: -10px;
+    @include flexcentre;
+    background-color: $color-primary;
+    color: white;
+  }
+  &__titre {
+    width: auto;
+    font-weight: bold;
+  }
+}
+.section1__list {
+  background-color: $color-grey-shadow;
+  width: 95%;
+  height: 70px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 6px 6px 6px #dbdbdb;
+  @include tablet{
+    width: 700px;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #f5edff;
+    > .icone {
+      color: $color-primary;
     }
   }
-  .img-cartes {
-    @include img-cartes;
+  &__icone{
+    font-weight: bold;
   }
-  figcaption {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+}
+// restaurants
+.section2 {
+  background-color: $color-grey-shadow;
+  padding: 35px 15px 50px 15px;
+  margin-top: 25px;
+  &__heading {
+    @include tablet {
+      @include flexcentre;
     }
-  .recipe {
-    margin-left: 15px;
-    margin-top: 0;
   }
-  
+  &__laptop {
+    @include tablet {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+  }
+  &__carte {
+    height: 270px;
+    border-radius: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: white;
+    box-shadow: 6px 6px 6px #dbdbdb;
+    position: relative;
+    @include tablet {
+      width: 370px;
+    }
+  }
+}
+a {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+figure {
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  height: 100%;
+  @include tablet {
+    margin-right: 0;
+  }
+}
+.img-cartes {
+  @include img-cartes;
+}
+figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.recipe {
+  margin-left: 15px;
+  margin-top: 0;
+}

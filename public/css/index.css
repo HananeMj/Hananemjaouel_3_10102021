@@ -17,6 +17,15 @@
     z-index: -10;
   }
 }
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    z-index: -10;
+  }
+}
 @keyframes loader-spin {
   0% {
     scale: 1;
@@ -90,16 +99,6 @@
     opacity: 1;
   }
 }
-@keyframes checker {
-  0% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-}
 * {
   box-sizing: border-box;
 }
@@ -113,8 +112,6 @@ h1 {
 
 h2 {
   font-family: "Roboto";
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 body {
@@ -245,6 +242,15 @@ h3 {
     z-index: -10;
   }
 }
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    z-index: -10;
+  }
+}
 @keyframes loader-spin {
   0% {
     scale: 1;
@@ -318,16 +324,6 @@ h3 {
     opacity: 1;
   }
 }
-@keyframes checker {
-  0% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-  100% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-}
 .loader {
   width: 100%;
   height: 100%;
@@ -350,6 +346,7 @@ h3 {
   border-bottom: 10px solid #ff79da;
   border-radius: 50%;
   margin: auto;
+  padding: 5px;
   top: 0;
   left: 0;
   right: 0;
@@ -358,25 +355,6 @@ h3 {
   -moz-animation: spin 500ms linear infinite;
   -o-animation: spin 500ms linear infinite;
   animation: spin 500ms linear infinite;
-}
-
-.carte-btn {
-  background-color: #99e2d0;
-  border-radius: 5px;
-  width: 80px;
-  height: 30px;
-  right: 27px;
-  position: absolute;
-  color: green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-}
-@media screen and (min-width: 1024px) {
-  .carte-btn {
-    right: 25px;
-  }
 }
 
 .explorer__btn {
@@ -389,6 +367,9 @@ h3 {
   text-align: center;
   font-size: 16px;
   box-shadow: 5px 5px 5px 3px #d3d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .explorer__btn:hover {
   cursor: pointer;
@@ -419,12 +400,29 @@ h3 {
   text-align: center;
   font-size: 16px;
   box-shadow: 5px 5px 5px 3px #d3d1d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 190px;
 }
 .btn__commande-btn:hover {
   cursor: pointer;
   box-shadow: 5px 5px 5px 3px #747373;
   filter: brightness(1.1);
+}
+
+.carte-btn {
+  background-color: #99e2d0;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  right: 15px;
+  position: absolute;
+  color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .heart .fa-heart {
@@ -467,7 +465,7 @@ body {
   z-index: 1;
   position: relative;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .container {
     display: flex;
     justify-content: center;
@@ -480,11 +478,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 1024px) {
-  .page1 {
-    border-bottom: 4px solid #9356dc;
-  }
-}
 
 .flèche {
   position: absolute;
@@ -496,14 +489,10 @@ body {
   height: 280px;
   width: 100%;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .image {
     height: 1142px;
   }
-}
-
-.img-note {
-  height: 1232px;
 }
 
 .restaurant {
@@ -512,11 +501,12 @@ body {
   border-radius: 25px 25px 0 0;
   width: 100%;
   flex-direction: column;
+  margin-top: -60px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .restaurant {
     border-radius: 0 0 0 0;
-    border-left: 4px solid #ff79da;
+    margin-top: 0;
   }
 }
 
@@ -564,9 +554,9 @@ body {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 5px 5px 0 #b8b7b7;
-  animation: slide 1000ms linear 2500ms;
-  -webkit-animation: slide 1000ms linear 2500ms;
-  -moz-animation: slide 1000ms linear 2500ms;
+  animation: slide 2500ms linear 2500ms;
+  -webkit-animation: slide 25000ms linear 2500ms;
+  -moz-animation: slide 2500ms linear 2500ms;
 }
 .food:hover {
   overflow: hidden;
@@ -575,9 +565,11 @@ body {
 }
 .food:hover > .check {
   margin-left: 10px;
-  width: 70px;
+  width: 80px;
   opacity: 1;
   transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
 }
 .food .food__starter {
   width: 100%;
@@ -585,11 +577,14 @@ body {
 }
 .food .food__prix {
   width: 50px;
+  font-weight: bold;
 }
 
 .food:hover .icon {
   transform: rotate(0deg);
   transition: transform 500ms ease-in-out;
+  -moz-transition: transform 500ms ease-in-out;
+  -webkit-transition: transform 500ms ease-in-out;
 }
 
 .food:hover > .food__starter {
@@ -613,11 +608,6 @@ body {
   overflow: hidden;
 }
 
-.food__prix {
-  padding-left: 10px;
-  font-weight: bold;
-}
-
 .check {
   height: 70px;
   width: 0;
@@ -637,12 +627,6 @@ body {
   transform: rotate(180deg);
 }
 
-@media screen and (min-width: 1024px) {
-  .footer {
-    border-top: 4px solid #9356dc;
-  }
-}
-
 .explorer {
   display: flex;
   justify-content: center;
@@ -654,10 +638,10 @@ body {
   padding-bottom: 50px;
   font-weight: bold;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 400px) {
   .explorer__info {
     font-weight: bold;
-    font-size: 30px;
+    ont-size: 30px;
   }
 }
 .explorer__parag {
@@ -665,7 +649,7 @@ body {
   font-weight: 300;
   width: 350px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 800px) {
   .explorer__parag {
     width: auto;
     font-size: 20px;
@@ -677,105 +661,99 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  padding: 10px;
 }
-@media screen and (min-width: 600px) {
-  .section1__heading {
+@media screen and (min-width: 800px) {
+  .section1 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
 }
+.section1__étapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
 .section1__number {
-  margin: 0 0 0 -35px;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50px;
+  position: absolute;
+  left: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #9356dc;
   color: white;
 }
-@media screen and (min-width: 600px) {
-  .section1__number {
-    margin-right: 5px;
-    margin-left: -10px;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .étapes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.section1__titre {
+  width: auto;
+  font-weight: bold;
 }
 
 .section1__list {
   background-color: #f2f2f2;
-  width: auto;
+  width: 95%;
   height: 70px;
-  margin: 15px 20px 15px 20px;
+  margin-bottom: 15px;
   border-radius: 25px;
+  position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  box-shadow: 6px 6px 6px #dbdbdb;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .section1__list {
-    width: auto;
-    margin: 10px;
-    padding: 0 5px 0 5px;
+    width: 700px;
   }
 }
 .section1__list:hover {
+  cursor: pointer;
   background-color: #f5edff;
 }
 .section1__list:hover > .icone {
   color: #9356dc;
 }
-
-.icone {
-  padding: 0 10px 0 0;
-}
-
-.section1__titre {
-  width: auto;
+.section1__list__icone {
+  font-weight: bold;
 }
 
 .section2 {
   background-color: #f2f2f2;
-  padding-top: 35px;
-  padding-bottom: 50px;
+  padding: 35px 15px 50px 15px;
   margin-top: 25px;
 }
-@media screen and (min-width: 600px) {
-  .section2 {
-    border-top: 4px solid #ff79da;
-  }
-}
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .section2__heading {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-.section2__laptop {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+@media screen and (min-width: 800px) {
+  .section2__laptop {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
 }
 .section2__carte {
   height: 270px;
   border-radius: 15px;
-  margin: 0 15px 20px 15px;
+  width: 100%;
+  margin-bottom: 15px;
   background-color: white;
   box-shadow: 6px 6px 6px #dbdbdb;
+  position: relative;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .section2__carte {
-    border: solid 4px #9356dc;
+    width: 370px;
   }
 }
 
@@ -792,9 +770,9 @@ figure {
   margin-bottom: 0;
   height: 100%;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   figure {
-    margin: 0;
+    margin-right: 0;
   }
 }
 

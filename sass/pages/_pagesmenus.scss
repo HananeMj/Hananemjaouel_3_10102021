@@ -6,15 +6,12 @@ body {
 .container {
   z-index: 1;
   position: relative;
-  @include laptop{
+  @include tablet{
     @include flexcentre;
   }
 }
 .page1 {
   @include flexcentre;
-  @include laptop{
-    border-bottom: 4px solid $color-primary;
-  }
 }
 .flèche {
   position: absolute;
@@ -24,12 +21,9 @@ body {
   object-fit: cover;
   height: 280px;
   width: 100%;
-  @include laptop{
+  @include tablet{
     height: 1142px;
   }
-}
-.img-note{
-height: 1232px;
 }
 .restaurant {
   position: relative;
@@ -37,9 +31,10 @@ height: 1232px;
   border-radius: 25px 25px 0 0;
   width: 100%;
   flex-direction: column;
-  @include laptop{
+  margin-top: -60px;
+  @include tablet{
     border-radius: 0 0 0 0;
-    border-left:  4px solid $color-secondary;
+    margin-top: 0;
   }
 
 }
@@ -80,18 +75,20 @@ height: 1232px;
   border-radius: 15px;
   background-color: white;
   box-shadow: 0 5px 5px 0 rgb(184, 183, 183);
-  animation: slide 1000ms linear 2500ms;
-  -webkit-animation: slide 1000ms linear 2500ms;
-  -moz-animation: slide 1000ms linear 2500ms;
+  animation: slide 2500ms linear 2500ms;
+  -webkit-animation: slide 25000ms linear 2500ms;
+  -moz-animation: slide 2500ms linear 2500ms;
   &:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
     > .check {
       margin-left: 10px;
-      width: 70px;
+      width: 80px;
       opacity: 1;
       transition: all 500ms ease-in-out;
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
     }
   }
 
@@ -101,13 +98,15 @@ height: 1232px;
   }
   .food__prix{
     width: 50px;
-    
+    font-weight: bold; 
   }
 }
 .food:hover{
    .icon{
       transform: rotate(0deg);
       transition: transform 500ms ease-in-out;
+      -moz-transition: transform 500ms ease-in-out;
+      -webkit-transition: transform 500ms ease-in-out;
   }
 }
 
@@ -132,12 +131,6 @@ height: 1232px;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
-  .food__prix {
-    padding-left: 10px;
-    font-weight: bold;
-  }
-
 .check {
   height: 70px;
   width: 0;
@@ -154,9 +147,5 @@ height: 1232px;
     transform: rotate(180deg);
   }
 }
-.footer{
-  @include laptop{
-    border-top: 4px solid $color-primary;
-  }
-}
+
 

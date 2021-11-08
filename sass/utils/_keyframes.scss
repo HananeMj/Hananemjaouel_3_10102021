@@ -17,6 +17,15 @@
     z-index: -10;
   }
 }
+@-moz-keyframes spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    z-index: -10;
+  }
+}
 @keyframes loader-spin {
   0% {
     scale: 1;
@@ -92,16 +101,6 @@
       opacity: 1;
   }
 }
-//keyframes slide left prix
-@keyframes checker{
-    0%{
-        transform: scaleX(0);
-        transform-origin: right;
-        }
-      100%{
-       transform: scaleX(1);
-       transform-origin: right;
-    }
-}
+
 
 
