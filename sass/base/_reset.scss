@@ -1,7 +1,12 @@
 *{
     box-sizing: border-box;
   }
-
+  body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: $font-roboto, sans-serif;
+    }
   h1{
       font-family: $font-family-shrikhand, sans-serif;
       text-align: center;
@@ -9,19 +14,8 @@
       margin-top: 25px;
     }
   h2{
-      font-family: $font-roboto;}
-  body{
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      font-family: $font-roboto, sans-serif;
-      }
-  h4{
-    margin-top: 20px;
-      margin-bottom: 7px;
-      margin-left: 15px;
-      font-size: 18px;
-      }
+      font-family: $font-roboto;
+    }
   h3{
       margin-left: 38px;
       margin-top: 0;
@@ -31,4 +25,10 @@
       font-weight: normal;
       color: white;
   }
+  h4{
+    margin-top: 20px;
+      margin-bottom: 7px;
+      margin-left: 15px;
+      font-size: 18px;
+      }
   

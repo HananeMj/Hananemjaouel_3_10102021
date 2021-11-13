@@ -6,8 +6,34 @@ body {
 .container {
   z-index: 1;
   position: relative;
-  @include tablet{
+  @include tablet {
     @include flexcentre;
+  }
+  &__image {
+    object-fit: cover;
+    height: 280px;
+    width: 100%;
+    @include tablet {
+      height: 1136.9px;
+    }
+  }
+  &__restaurant {
+    position: relative;
+    background-color: $color-grey-shadow;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    flex-direction: column;
+    margin-top: -60px;
+    @include tablet {
+      border-radius: 0 0 0 0;
+      margin-top: 0;
+      height: 1136.9px;
+    }
+  }
+}
+.img-note {
+  @include tablet {
+    height: 1136.9px;
   }
 }
 .page1 {
@@ -17,30 +43,9 @@ body {
   position: absolute;
   margin-right: 300px;
 }
-.image {
-  object-fit: cover;
-  height: 280px;
-  width: 100%;
-  @include tablet{
-    height: 1142px;
-  }
-}
-.restaurant {
-  position: relative;
-  background-color: $color-grey-shadow;
-  border-radius: 25px 25px 0 0;
-  width: 100%;
-  flex-direction: column;
-  margin-top: -60px;
-  @include tablet{
-    border-radius: 0 0 0 0;
-    margin-top: 0;
-  }
-
-}
 .menu {
   font-family: $font-family-shrikhand;
-  font-size: 30px;
+  font-size: 26px;
   margin-left: 15px;
   margin-top: 0;
   padding-top: 15px;
@@ -92,45 +97,45 @@ body {
     }
   }
 
-  .food__starter{
+  .food__starter {
     width: 100%;
     padding-left: 10px;
   }
-  .food__prix{
+  .food__prix {
     width: 50px;
-    font-weight: bold; 
+    font-weight: bold;
   }
 }
-.food:hover{
-   .icon{
-      transform: rotate(0deg);
-      transition: transform 500ms ease-in-out;
-      -moz-transition: transform 500ms ease-in-out;
-      -webkit-transition: transform 500ms ease-in-out;
+.food:hover {
+  .icon {
+    transform: rotate(0deg);
+    transition: transform 500ms ease-in-out;
+    -moz-transition: transform 500ms ease-in-out;
+    -webkit-transition: transform 500ms ease-in-out;
   }
 }
 
-  .food:hover{
-    > .food__starter{
-       text-overflow: ellipsis;
-        overflow: hidden;
-      }
-    }
-  
-.food__food1 {
-    font-size: 16px;
-    font-weight: bold;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-   .food__plus {
-    font-weight: 100;
-    font-size: 15px;
-    white-space: nowrap;
+.food:hover {
+  > .food__starter {
     text-overflow: ellipsis;
     overflow: hidden;
   }
+}
+
+.food__food1 {
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.food__plus {
+  font-weight: 100;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .check {
   height: 70px;
   width: 0;
@@ -147,5 +152,3 @@ body {
     transform: rotate(180deg);
   }
 }
-
-

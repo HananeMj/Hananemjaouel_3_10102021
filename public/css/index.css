@@ -28,10 +28,10 @@
 }
 @keyframes loader-spin {
   0% {
-    scale: 1;
+    scale: 1, 1;
   }
   100% {
-    scale: 1;
+    scale: 1, 1;
     z-index: -10;
     visibility: hidden;
   }
@@ -103,6 +103,13 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
 h1 {
   font-family: "Shrikhand", "cursive", sans-serif;
   text-align: center;
@@ -114,20 +121,6 @@ h2 {
   font-family: "Roboto";
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
-h4 {
-  margin-top: 20px;
-  margin-bottom: 7px;
-  margin-left: 15px;
-  font-size: 18px;
-}
-
 h3 {
   margin-left: 38px;
   margin-top: 0;
@@ -136,6 +129,13 @@ h3 {
   font-family: "Shrikhand", "cursive", sans-serif;
   font-weight: normal;
   color: white;
+}
+
+h4 {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  margin-left: 15px;
+  font-size: 18px;
 }
 
 .header {
@@ -253,10 +253,10 @@ h3 {
 }
 @keyframes loader-spin {
   0% {
-    scale: 1;
+    scale: 1, 1;
   }
   100% {
-    scale: 1;
+    scale: 1, 1;
     z-index: -10;
     visibility: hidden;
   }
@@ -472,6 +472,37 @@ body {
     align-items: center;
   }
 }
+.container__image {
+  object-fit: cover;
+  height: 280px;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .container__image {
+    height: 1136.9px;
+  }
+}
+.container__restaurant {
+  position: relative;
+  background-color: #f2f2f2;
+  border-radius: 25px 25px 0 0;
+  width: 100%;
+  flex-direction: column;
+  margin-top: -60px;
+}
+@media screen and (min-width: 800px) {
+  .container__restaurant {
+    border-radius: 0 0 0 0;
+    margin-top: 0;
+    height: 1136.9px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .img-note {
+    height: 1136.9px;
+  }
+}
 
 .page1 {
   display: flex;
@@ -484,35 +515,9 @@ body {
   margin-right: 300px;
 }
 
-.image {
-  object-fit: cover;
-  height: 280px;
-  width: 100%;
-}
-@media screen and (min-width: 800px) {
-  .image {
-    height: 1142px;
-  }
-}
-
-.restaurant {
-  position: relative;
-  background-color: #f2f2f2;
-  border-radius: 25px 25px 0 0;
-  width: 100%;
-  flex-direction: column;
-  margin-top: -60px;
-}
-@media screen and (min-width: 800px) {
-  .restaurant {
-    border-radius: 0 0 0 0;
-    margin-top: 0;
-  }
-}
-
 .menu {
   font-family: "Shrikhand", "cursive";
-  font-size: 30px;
+  font-size: 26px;
   margin-left: 15px;
   margin-top: 0;
   padding-top: 15px;
@@ -641,7 +646,7 @@ body {
 @media screen and (min-width: 400px) {
   .explorer__info {
     font-weight: bold;
-    ont-size: 30px;
+    font-size: 30px;
   }
 }
 .explorer__parag {
